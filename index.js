@@ -24,12 +24,15 @@ class Zene{
         this.zeneHossz = bekertHossz;
     }
 
-    hozzáad(){
-        let ujZene = new Zene(document.getElementById('cim').value,document.getElementById('hossz').value);
+    static hozzáad(){
+        let cim = zeneCim(document.getElementById('cim').value);
+        let hossz = zeneHossz(document.getElementById('hossz').value);
+        let ujZene = new Zene(cim,hossz);
         lista.push(ujZene);
         összesIdő += document.getElementById('hossz').value;
+        document.getElementById('ossz').innerHTML = "Ide jönn az összesített idő: " + összesIdő.toString();
     }
 
 }
 
-document.getElementById('gomb').addEventListener('click',hozzáad());
+document.getElementById('gomb').addEventListener('click',Zene.hozzáad());
