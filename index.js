@@ -1,3 +1,5 @@
+let lista = []
+
 class Zene{
     #zeneCim;
     #zeneHossz
@@ -20,4 +22,11 @@ class Zene{
     set ZeneHossz(bekertHossz){
         this.zeneHossz = bekertHossz;
     }
+
+    hozzáad(){
+        lista.push();
+    }
+
 }
+
+document.getElementById('gomb').addEventListener('click',hozzáad());
