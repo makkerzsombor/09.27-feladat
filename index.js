@@ -7,7 +7,7 @@ class Zene{
 
     constructor(zeneCim, zeneHossz){
         this.#zeneCim = zeneCim;
-        this.zeneHossz = zeneHossz;
+        this.ZeneHossz = zeneHossz;
     }
 
     get zeneCim(){
@@ -21,13 +21,13 @@ class Zene{
         return this.#zeneHossz;
     }
     set ZeneHossz(bekertHossz){
-        this.zeneHossz = bekertHossz;
+        this.#zeneHossz = bekertHossz;
     }
 
     static osszegzes(lista){
         let osszeg = 0;
         for (let i = 0; i < lista.length; i++) {
-            osszeg = lista.ZeneHossz;
+            osszeg += lista[i].ZeneHossz;
         }
         return osszeg; 
     }
@@ -51,6 +51,7 @@ function init() {
     ];    
     lista.push(zenék);
     let osszesIdo = Zene.osszegzes(zenék);
+    console.log(osszesIdo);
     document.getElementById('ossz').innerHTML = "Ide jönn az összesített idő: " + osszesIdo;
 }
 
