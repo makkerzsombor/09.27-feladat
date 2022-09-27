@@ -24,6 +24,14 @@ class Zene{
         this.zeneHossz = bekertHossz;
     }
 
+    static osszegzes(lista){
+        let osszeg = 0;
+        for (let i = 0; i < lista.length; i++) {
+            osszeg = lista.ZeneHossz;
+        }
+        return osszeg; 
+    }
+
     static hozzáad(){
         let cim = document.getElementById('cim').value;
         let hossz = parseInt(document.getElementById('hossz').value);
