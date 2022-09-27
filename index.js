@@ -44,4 +44,13 @@ class Zene{
 
 }
 
+function init() {
+    let zenék = [    
+        new Zene('Zene1', 120),
+        new Zene('Zene2', 150),
+    ];
+    Zene.osszegzes(zenék);
+}
+
+document.addEventListener('DOMContentLoaded',init)
 document.getElementById('gomb').addEventListener('click',Zene.hozzáad);
