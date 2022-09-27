@@ -48,8 +48,10 @@ function init() {
     let zenék = [    
         new Zene('Zene1', 120),
         new Zene('Zene2', 150),
-    ];
-    Zene.osszegzes(zenék);
+    ];    
+    lista.push(zenék);
+    let osszesIdo = Zene.osszegzes(zenék);
+    document.getElementById('ossz').innerHTML = "Ide jönn az összesített idő: " + osszesIdo;
 }
 
 document.addEventListener('DOMContentLoaded',init)
