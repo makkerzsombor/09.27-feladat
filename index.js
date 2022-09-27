@@ -14,5 +14,10 @@ class Zene{
         this.#zeneCim = bekertCim;
     }
 
-    
+    get ZeneHossz(){
+        return this.#zeneHossz;
+    }
+    set ZeneHossz(bekertHossz){
+        this.zeneHossz = bekertHossz;
+    }
 }
