@@ -24,7 +24,8 @@ class Zene{
     }
 
     hozzáad(){
-        lista.push();
+        let ujZene = new Zene(document.getElementById('cim').value,document.getElementById('hossz').value);
+        lista.push(ujZene);
     }
 
 }
