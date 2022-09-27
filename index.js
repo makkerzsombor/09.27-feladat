@@ -1,4 +1,5 @@
 let lista = []
+let összesIdő = 0;
 
 class Zene{
     #zeneCim;
@@ -26,6 +27,7 @@ class Zene{
     hozzáad(){
         let ujZene = new Zene(document.getElementById('cim').value,document.getElementById('hossz').value);
         lista.push(ujZene);
+        összesIdő += document.getElementById('hossz').value;
     }
 
 }
