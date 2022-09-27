@@ -1,5 +1,6 @@
 let lista = []
 let összesIdő = 0;
+// let voltszam = 0;
 
 class Zene{
     #zeneCim;
@@ -51,8 +52,8 @@ function init() {
     ];    
     lista.push(zenék);
     let osszesIdo = Zene.osszegzes(zenék);
-    console.log(osszesIdo);
-    document.getElementById('ossz').innerHTML = "Ide jönn az összesített idő: " + osszesIdo;
+    document.getElementById('ossz').value = osszesIdo;
+    //document.getElementById('ossz').innerHTML = "Ide jönn az összesített idő: " + osszesIdo;
 }
 
 document.addEventListener('DOMContentLoaded',init)
